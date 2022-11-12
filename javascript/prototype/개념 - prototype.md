@@ -27,7 +27,7 @@
 
 [이 stackoverflow](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript) 답변에서는, `prototype`을 다음과 같이 설명한다.
 
-**\*"`prototype` is the object that is used to build `**proto**`when you create an object with`new`"\***
+**_"`prototype` is the object that is used to build `proto` when you create an object with `new`"_**
 
 그래서 다음과 같은 결과를 갖는다:
 
@@ -35,7 +35,7 @@
 (new Foo().__proto__ === Foo.prototype(new Foo()).prototype) === undefined;
 ```
 
-## 프로토타입은 모든 객체가 가지고 있는 속성이다.
+## 프로토타입(`__proto__`)은 모든 객체가 가지고 있는 속성이다.
 
 위에서 프로토타입은 객체간의 연결을 나타낸다고 하였다. 그리고 중요한 점은, 모든 자바스크립트 오브젝트는 `__proto__` 속성을 가지고 있다.
 
@@ -53,7 +53,9 @@ Foo.prototype.__proto__ === Object.prototype;
 
 ## 잠깐만, constructor function도 결국 object아냐?
 
-맞다. 그러면 constructor function도 `__proto__` 속성이 존재해야한다.
+이에 대한 답은 [개념 - constructor](./%EA%B0%9C%EB%85%90%20-%20constructor.md)에서 다루겠다.
+
+<!-- 맞다. 그러면 constructor function도 `__proto__` 속성이 존재해야한다. [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)에 따르면, 자바스크립트에서 함수(`function`)은 `Function`이라는 constructor에 의해 생성된 object들이다.
 
 그래서 한번 찍어보면:
 
@@ -68,7 +70,7 @@ function Person(name) {
 
 <img src='./img/2.png'>
 
-이런식으로 나온다. 그런데 `Person.__proto__.constructor`를 찍어봐도 같은 결과가 나오는데, 이를 `function` 객체라고 이해하기 보단 native code, 즉, `Person.__proto__`와 `Person.__proto__.constructor`를 정의하는 native code로 이해하는 것이 나을 것 같다.
+이런식으로 나온다. 그런데 `Person.__proto__.constructor`를 찍어봐도 같은 결과가 나오는데, 이를 `function` 객체라고 이해하기 보단 native code, 즉, `Person.__proto__`와 `Person.__proto__.constructor`를 정의하는 native code로 이해하는 것이 나을 것 같다. -->
 
 ## 프로토타입 체이닝과 property 할당
 
