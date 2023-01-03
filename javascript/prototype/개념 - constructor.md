@@ -43,7 +43,7 @@ function Person(name) {
 [또한, `function`(임의로 정의된 자바스크립트 함수)의 `constructor`는 `Function` 이라고 한다.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) 이 말을 이해하기 위해선 앞으로 나올 사항들에 대한 이해와 앞서배운 `__proto__`의 개념에 대한 이해가 필요하다.
 
 1. 자바스크립트의 모든 `function`은 `object`라고 하였다. 그렇다면 `__proto__` 속성이 존재해야한다.
-2. 그 `__proto__`는 `function`을 만들어낼때 쓰는 `constructor`를 속성으로 가지고 있을 것이다.
+2. 그 `__proto__`는 `function`을 만들어낼때 쓰는 `constructor`를, 즉 "자바스크립트 함수"를 만들어내는 constructor를 속성으로 가지고 있을 것이다.
 3. 찍어보자.
 
 <figure>

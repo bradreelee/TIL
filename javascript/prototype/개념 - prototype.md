@@ -46,11 +46,19 @@ new Foo().__proto__ === Foo.prototype;
 Foo.prototype.__proto__ === Object.prototype;
 ```
 
-어찌보면 이해가 가지 않는가? `Foo.prototype`도 결국 object이다. `new Foo`로 인해 생성된 "object"와 같이, `Foo.prototype`도 "object"이고, "object"라면 `__proto__` 속성을 가지고 있을 것이다.
+<!-- 어찌보면 이해가 가지 않는가? `Foo.prototype`도 결국 object이다. `new Foo`로 인해 생성된 "object"와 같이, `Foo.prototype`도 "object"이고, "object"라면 `__proto__` 속성을 가지고 있을 것이다.
 
 또한 `Foo.prototype`은 "object"이기 때문에, 그 object를 찍어내는 생성자 함수가 있을 것이다.
 
-그것이 바로 `Object.prototype`인 것이다.
+그것이 바로 `Object.prototype`인 것이다. -->
+
+그럼 아래와 같은 코드도 성립할 것이다.
+
+```javascript
+Foo.prototype.__proto__.constructor === Object.prototype.constructor === Object
+```
+
+즉, `Foo.prototype.__proto__`는 `Object` 타입이라는 것.
 
 ## 잠깐만, constructor function도 결국 object아냐?
 
