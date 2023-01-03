@@ -32,7 +32,8 @@
 그래서 다음과 같은 결과를 갖는다:
 
 ```javascript
-(new Foo().__proto__ === Foo.prototype(new Foo()).prototype) === undefined;
+new Foo().__proto__ === Foo.prototype;
+(new Foo()).prototype) === undefined;
 ```
 
 ## 프로토타입(`__proto__`)은 모든 객체가 가지고 있는 속성이다.
